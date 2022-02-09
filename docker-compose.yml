@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    container_name: 'awesome-links'
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    volumes:
+      - ./database/postgresql:/var/lib/postgresql
+    environment:
+      POSTGRES_USERNAME: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: pgdb
